@@ -1,0 +1,68 @@
+.more-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the products */
+}
+
+.id {
+  width: calc(20% - 20px);
+  margin: 10px;
+  padding: 10px;
+  /* border: 2px solid #333;  */
+  /* border-radius: 10px;  */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
+}
+
+.image-container:hover {
+  transform: translateY(-5px); /* Add a slight upward lift on hover */
+}
+
+.horizontal-image {
+  width: 100%; /* Ensure the image fills its container */
+  /* max-height: 50vh; */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 5px; /* Add rounded corners to the image */
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-name {
+  font-size: 18px; /* Increase the font size for the product name */
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold; /* Make the price bold */
+  color: #ff5722; /* Change the price color to a vibrant shade */
+}
+
+.add-to-cart-btn {
+  background-color: #ff5722; /* Set a bold color for the button */
+  color: #fff; /* Set the text color to white */
+  border: none;
+  padding: 10px 20px; /* Add padding to the button */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e64a19; /* Darken the button color on hover */
+}
+
+
+@media (max-width: 768px) {
+  .id {
+    width: calc(30% - 20px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .id {
+    width: calc(100% - 10px); /* Adjust width for even smaller screens */
+    margin: 5px 0; /* Adjust margin for even smaller screens */
+  }
+}

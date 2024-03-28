@@ -1,0 +1,113 @@
+.navbar {
+  background-color: #006400;
+  color: #a5a5a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: fixed;
+  font-weight: 800;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link.active {
+ color: #ffffff;
+}
+
+.nav-link {
+  color: #1b1515;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+/* .nav-link:hover {
+  background-color: #042018;
+}  */
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* nav X shape hide */
+.navbar-toggle.active .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .icon-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    color: #000000;
+    background-color: #2d7e2d00;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    bottom: auto;
+  }
+
+  .navbar-nav {
+    background-color: #06a137;
+    padding: 20px 5px;
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav.expanded {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .icon-bar {
+    background-color: #000000;
+  }
+
+  .navbar-logo {
+    color: #02660f;
+  }
+}

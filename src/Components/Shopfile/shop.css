@@ -1,0 +1,140 @@
+.twoimg {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.image-container {
+  text-align: center;
+  margin: 0 10px;
+  flex: 35%; 
+  max-width: 400px; 
+}
+
+.horizontal-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+
+.image-container p {
+  margin-top: 1%;
+}
+
+.click {
+  /* box-shadow: 0px 0px 20px rgb(67, 207, 102); */
+  margin-bottom: 15%;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: #40b84a;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.click:hover {
+  background-color: #345738;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .image-container {
+    flex-basis: 100%; 
+    max-width: none;
+  }
+  .twoimg {
+    flex-wrap: wrap; 
+  }
+  
+}
+
+/* search bar css  */
+.background {
+  background-image: url('https://img.freepik.com/free-photo/portrait-cute-happy-girl-kissing-her-credit-card-after-buying-gifts-holding-shopping-bags-standing-beige-background_1258-123180.jpg?t=st=1710929168~exp=1710932768~hmac=9030efdee596fa0889627b8c897096d6c9975b4f5437ffbcabd27486b455a80f&w=996');
+  background-size: cover;
+  background-position: center;
+  height: 50vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.box {
+  width: 50%; /* Adjust width as needed */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust background color and opacity */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-icon {
+  padding: 8px;
+  color: #555;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #000;
+}
+
+
+
+/* 3 shops*/
+
+.threeShops{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.image-container {
+  text-align: center;
+  margin: 0 10px;
+  flex: 35%; 
+  max-width: 400px; 
+}
+
+.horizontal-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+
+.image-container p {
+  margin-top: 1%;
+}
+
+
+/* Footer */
+
+.footer-container {
+  background-color: #333; 
+  color: #fff;
+  padding: 20px; 
+  width: 100%;
+  bottom: 0; 
+}
+
+.footer-content {
+  max-width: 1200px; /* Maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.footer-content p {
+  margin: 0; /* Remove default margin for the paragraph */
+}
