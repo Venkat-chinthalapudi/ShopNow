@@ -9,6 +9,11 @@ const Navbar = () => {
     setIsNavExpanded(!isNavExpanded);
   };
 
+  const handleNavItemClick = () => {
+    setIsNavExpanded(false); // Close the navbar when a navigation item is clicked
+  };
+
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -24,21 +29,21 @@ const Navbar = () => {
         </button>
       </div>
       <ul className={`navbar-nav ${isNavExpanded ? 'expanded' : ''}`}>
-        <li className="nav-item">
+        <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink exact to="/" className="nav-link" activeClassName="active">Shop</NavLink> {/* Use NavLink with activeClassName */}
         </li>
-        <li className="nav-item">
+        <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink to="/category" className="nav-link" activeClassName="active">Category</NavLink> {/* Use NavLink with activeClassName */}
         </li>
-        <li className="nav-item">
+        <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink to="/cart" className="nav-link" activeClassName="active">Cart</NavLink> {/* Use NavLink with activeClassName */}
         </li>
-        <li className="nav-item">
+        <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink to="/contact" className="nav-link" activeClassName="active">Profile</NavLink> {/* Use NavLink with activeClassName */}
         </li>
         <div className="search-box">
           <input type="text" placeholder="Search..." />
-          <button>Find</button>
+          <button>Search</button>
         </div>
       </ul>
     </nav>

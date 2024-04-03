@@ -34,7 +34,7 @@
 }
 
 .click:hover {
-  background-color: #345738;
+  background-color: #baffc3;
 }
 
 /* Media Query for smaller screens */
@@ -137,4 +137,48 @@
 
 .footer-content p {
   margin: 0; /* Remove default margin for the paragraph */
+}
+
+
+
+
+/* Slider.css */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
 }

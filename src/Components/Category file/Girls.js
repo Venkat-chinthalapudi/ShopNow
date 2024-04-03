@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 import'./Stytles/boys.css';
 
 
 const  Girls = ({ addToCart }) => {
+ 
+   const navigate = useNavigate();
+
   const [products] = useState([
    
     { id: 1, name: "Product 1", image: "https://images.meesho.com/images/products/130869482/xl8qe_512.webp", description: "Product 1 Description", price: "₹1999" },
@@ -29,8 +34,17 @@ const  Girls = ({ addToCart }) => {
     addToCart(product);
   };
 
+  const navigateToCategory = () => {
+  navigate('/Category'); /* Navigating back to the category page*/
+   
+  };
+
   return (
     <div className='more-products'>
+      <div className="back-button" onClick={navigateToCategory}>
+        <FaArrowLeft size={24}/>   {/* Displaying the left arrow icon */}
+      </div>
+
       {products.map((product) => (
         <div key={product.id} className="id">
           <img src={product.image} alt={product.name} className="horizontal-image" />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import img4 from '../Img/man.png';
 import img3 from '../Img/girl k.png';   
 import img2 from '../Img/boy s .png';

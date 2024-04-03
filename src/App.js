@@ -5,11 +5,13 @@ import Shop from './Components/Shop';
 import Cart from './Components/Cart'; 
 import Category from './Components/Category';
 import Contact from './Components/Contact'; 
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom'; 
 import Boys from './Components/Category file/Boys';
 import Celebrations from './Components/Category file/Celebrations';
 import Girls from './Components/Category file/Girls';
 import Kids from './Components/Category file/Kids';
+import Fashion from './Components/Shopfile/Fashion';
+import Fashion1 from './Components/Shopfile/Fashion1';
 
 
 const App = () => {
@@ -37,6 +39,10 @@ const App = () => {
           <Route path="/celebrations" element={<Celebrations addToCart={addToCart}/>}/>
           <Route path="/girls" element={<Girls addToCart={addToCart}/>}/>
           <Route path="/kids" element={<Kids addToCart={addToCart}/>}/>
+          <Route path="/fashion" element={<Fashion />} />
+          <Route path="/fashion1" element={<Fashion1 />} />
+
+
 
         </Routes>
         <Navbar />

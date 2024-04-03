@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 import'./Stytles/boys.css';
 
 
 const  Celebrations = ({ addToCart }) => {
+
+  const navigate = useNavigate(); // Initializing useHistory hook
+
   const [products] = useState([
    
     { id: 1, name: "Product 1", image: "https://qph.cf2.quoracdn.net/main-qimg-4e8d1410a0b30c4f26d018fd9cf79d87", description: "Product 1 Description", price: "₹1999" },
@@ -29,8 +34,16 @@ const  Celebrations = ({ addToCart }) => {
     addToCart(product);
   };
 
+
+  const navigateToCategory = () => {
+    navigate('/Category'); // Navigating back to the category page
+  };
+
   return (
     <div className='more-products'>
+      <div className="back-button" onClick={navigateToCategory}>
+        <FaArrowLeft size={24} /> {/* Displaying the left arrow icon */}
+      </div>
       {products.map((product) => (
         <div key={product.id} className="id">
           <img src={product.image} alt={product.name} className="horizontal-image" />

@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import'./Stytles/boys.css';
+import { FaArrowLeft } from 'react-icons/fa';
 
 
 const Boys = ({ addToCart }) => {
+   
+  const navigate = useNavigate(); // Initializing useHistory hook
+
   const [products] = useState([
    
     { id: 1, name: "Product 1", image: "https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/n/k/6/xxl-casual-full-sleeve-cotton-shirt-for-men-solstice-original-imagwrz6gw6ugg27.jpeg?q=70&crop=false", description: "Product 1 Description", price: "₹1999" },
@@ -30,9 +34,15 @@ const Boys = ({ addToCart }) => {
     addToCart(product);
   };
 
+  const navigateToCategory = () => {
+    navigate('/Category'); // Navigating back to the category page
+  };
+
   return (
     <div className='more-products'>
-      
+      <div className="back-button" onClick={navigateToCategory}>
+        <FaArrowLeft size={24} /> {/* Displaying the left arrow icon */}
+      </div>
       {products.map((product) => (
         <div key={product.id} className="id">
           <img src={product.image} alt={product.name} className="horizontal-image" />
