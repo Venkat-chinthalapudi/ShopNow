@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './App.css';
 import Login from './Components/Login';
@@ -35,20 +34,22 @@ const App = () => {
     <Router>
       <div>
         <Routes>
-          {/* Render Shop component if user is logged in, else render Login component */}
+          {/* Redirect to Shop if user is logged in, otherwise redirect to Login */}
           <Route path="/" element={<Navigate to={isLoggedIn ? "/shop" : "/login"} />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} /> {/* New route for Login */}
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-          <Route path="/category" element={<Category addToCart={addToCart} />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/boys" element={<Boys addToCart={addToCart} />} />
-          <Route path="/celebrations" element={<Celebrations addToCart={addToCart} />} />
-          <Route path="/girls" element={<Girls addToCart={addToCart} />} />
-          <Route path="/kids" element={<Kids addToCart={addToCart} />} />
-          <Route path="/fashion" element={<Fashion />} />
-          <Route path="/fashion1" element={<Fashion1 />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          {/* Protected routes */}
+          {isLoggedIn && <Route path="/shop" element={<Shop />} />}
+          {isLoggedIn && <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />}
+          {isLoggedIn && <Route path="/category" element={<Category addToCart={addToCart} />} />}
+          {isLoggedIn && <Route path="/contact" element={<Contact />} />}
+          {isLoggedIn && <Route path="/boys" element={<Boys addToCart={addToCart} />} />}
+          {isLoggedIn && <Route path="/celebrations" element={<Celebrations addToCart={addToCart} />} />}
+          {isLoggedIn && <Route path="/girls" element={<Girls addToCart={addToCart} />} />}
+          {isLoggedIn && <Route path="/kids" element={<Kids addToCart={addToCart} />} />}
+          {isLoggedIn && <Route path="/fashion" element={<Fashion />} />}
+          {isLoggedIn && <Route path="/fashion1" element={<Fashion1 />} />}
         </Routes>
+        {/* Display Navbar only if user is logged in */}
         {isLoggedIn && <Navbar />}
       </div>
     </Router>
