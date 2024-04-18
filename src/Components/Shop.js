@@ -17,7 +17,7 @@ const Home = () => {
   <div className="home">
       <img src={img5} alt="Welcome" />
       <div className="image-text">
-      <h1>Welcome to Our Website!</h1>
+      <h1 className='M'>Welcome to Our Website!</h1>
       <p>Excuse me, could you point me in the direction of specific item ?</p>
       <button className='click'>Check here</button>
    </div>

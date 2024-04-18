@@ -5,7 +5,7 @@ import Navbar from './Components/Nav';
 import Shop from './Components/Shop';
 import Cart from './Components/Cart';
 import Category from './Components/Category';
-import Contact from './Components/Contact';
+import Contact from './Components/Profile';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Boys from './Components/Category file/Boys';
 import Celebrations from './Components/Category file/Celebrations';
