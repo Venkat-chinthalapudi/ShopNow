@@ -11,11 +11,10 @@ function Shop0() {
           <input
             type="text"
             className="search-input"
-            placeholder="Enter email"
-          />
-          <div className="search-icon"> {/* Use a div for the search icon */}
-            <FontAwesomeIcon icon={faArrowRight} /> {/* Use the right arrow icon */}
-          </div>
+            placeholder="Enter email"/>
+            <div className="search-icon"> {/* Use a div for the search icon */}
+              <FontAwesomeIcon icon={faArrowRight} /> {/* Use the right arrow icon */}
+            </div>
         </div>
       </div>
     </div>
