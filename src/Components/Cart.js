@@ -19,7 +19,7 @@ const Cart = ({ cart, removeFromCart }) => {
   };
 
   const handleRemoveFromCart = (product) => {
-    const updatedCart = cartItems.map((item) =>
+    const updatedCart = cartItems.map((item) =>  //to increse the product add+  and-  to products quninity increse 
       item.id === product.id ? { ...item, quantity: (item.quantity || 0) - 1 } : item
     );
 
@@ -46,11 +46,11 @@ const Cart = ({ cart, removeFromCart }) => {
           <div className="id-and-buttons">
             <p className="product-id">ID: {product.id}</p>
             <div className="quantity-controls">
-              <button className="B" onClick={() => handleRemoveFromCart(product)}>
+              <button className="C" onClick={() => handleRemoveFromCart(product)}>
                 -
               </button>
               <span className="quantity">{product.quantity}</span>
-              <button className="B" onClick={() => handleAddToCart(product)}>
+              <button className="C" onClick={() => handleAddToCart(product)}>
                 +
               </button>
             </div>

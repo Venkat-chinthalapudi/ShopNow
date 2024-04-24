@@ -28,21 +28,21 @@ const Navbar = () => {
           <span className="icon-bar"></span>
         </button>
       </div>
-      <ul className={`navbar-nav ${isNavExpanded ? 'expanded' : ''}`}>
+      <ul className={`navbar-nav {isNavExpanded ? 'expanded' : ''}`}>
         <li className="nav-item" onClick={handleNavItemClick}>
-          <NavLink exact to="/" className="nav-link" activeClassName="active">Shop</NavLink> {/* Use NavLink with activeClassName */}
+          <NavLink exact to="/" className="nav-link" activeClassName="active">Shop</NavLink> 
         </li>
         <li className="nav-item" onClick={handleNavItemClick}>
-          <NavLink to="/category" className="nav-link" activeClassName="active">Category</NavLink> {/* Use NavLink with activeClassName */}
+          <NavLink to="/category" className="nav-link" activeClassName="active">Category</NavLink>
         </li>
         <li className="nav-item" onClick={handleNavItemClick}>
-          <NavLink to="/cart" className="nav-link" activeClassName="active">Cart</NavLink> {/* Use NavLink with activeClassName */}
+          <NavLink to="/cart" className="nav-link" activeClassName="active">Cart</NavLink> 
         </li>
         <li className="nav-item" onClick={handleNavItemClick}>
-          <NavLink to="/contact" className="nav-link" activeClassName="active">Profile</NavLink> {/* Use NavLink with activeClassName */}
+          <NavLink to="/Profile" className="nav-link" activeClassName="active">Profile</NavLink> 
         </li>
         <div className="search-box">
-          <input type="text" placeholder="Search..." />
+          <input type="search" placeholder="Search..." />
           <button>Search</button>
         </div>
       </ul>

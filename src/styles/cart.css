@@ -5,6 +5,7 @@
   padding: 5px 10px;
   border-radius: 50%;
   font-size: 0.8rem;
+  
 }
 
 .t{
@@ -21,6 +22,7 @@
 /* Add styles for the cart item */
 .cart-item {
   display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
