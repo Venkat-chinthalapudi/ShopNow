@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
+import { NavLink } from "react-router-dom";
 import '../styles/nav.css';
+
+
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -28,7 +30,7 @@ const Navbar = () => {
           <span className="icon-bar"></span>
         </button>
       </div>
-      <ul className={`navbar-nav {isNavExpanded ? 'expanded' : ''}`}>
+      <ul className={`navbar-nav ${isNavExpanded ? 'expanded' : ''}`}>
         <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink exact to="/" className="nav-link" activeClassName="active">Shop</NavLink> 
         </li>
@@ -43,7 +45,6 @@ const Navbar = () => {
         </li>
         <div className="search-box">
           <input type="search" placeholder="Search..." />
-          <button>Search</button>
         </div>
       </ul>
     </nav>

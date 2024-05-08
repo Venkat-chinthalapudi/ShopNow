@@ -1,4 +1,4 @@
-.search-container {
+/* .search-container {
     margin-bottom: 20px;
   }
   
@@ -16,5 +16,14 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+   */
+
+   .more-products {
+    margin-top: 10%;
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
   }
   

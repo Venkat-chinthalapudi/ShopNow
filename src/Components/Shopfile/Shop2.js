@@ -1,7 +1,10 @@
 import React from 'react';
 import './shop.css';
 
-function Shop2() {
+
+// 3 images and buttuns in home screen 
+
+function Shop3() {
   return (
     
     <div className='threeShops'>
@@ -24,4 +27,4 @@ function Shop2() {
   );
 }
 
-export default Shop2;
+export default Shop3;

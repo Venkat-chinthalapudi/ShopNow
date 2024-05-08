@@ -6,13 +6,15 @@ import img3 from '../Img/girl k.png';
 import img2 from '../Img/boy s .png';
 import img1  from '../Img/girl.png';
 import Home1 from './Shopfile/Shop1';
-import Home0 from './Shopfile/Shop0';
+import Add0 from './Shopfile/Shop0';
+import Add1 from './Shopfile/AddOffer';
 import Home2 from './Shopfile/Shop2';
 import { Link } from 'react-router-dom';
 import Footer from './Shopfile/Footer';
 
 const Home = () => {
   return (
+
 <div className="container"> 
   <div className="home">
       <img src={img5} alt="Welcome" />
@@ -22,7 +24,13 @@ const Home = () => {
       <button className='click'>Check here</button>
    </div>
   </div>
-{/* sliders images */}
+  {/* Add like a offers */}
+    <div className='adds'>
+    <Add1/>
+   </div>
+    
+
+{/* sliders images in catrgory wise */}
    <h4 className='text-center'>Shop with a list</h4>
      <div className="slider">       
         <div className="image-container">
@@ -50,18 +58,16 @@ const Home = () => {
        <p>BOYS</p>
         </div>
       </div>
+
       {/*  2 products  */}
     <div className='twoshop'>
          <Home1/>
     </div>
 
+     {/* offers displays  */}
     <div className='search'>
-         <Home0/>
-   </div>
-
-   {/* <div className='add'>
-    <Add/>
-   </div> */}
+         <Add0/>
+    </div>
 
    <div className='threeshop'>
          <Home2/>

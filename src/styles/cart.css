@@ -1,20 +1,20 @@
 /* Add styles for the cart notification */
 .notification {
-  background-color: #ff5733;
+  background-color: #ff523b; /* Flipkart red */
   color: #fff;
   padding: 5px 10px;
   border-radius: 50%;
   font-size: 0.8rem;
-  
 }
 
-.t{
-  text-align: center;
+.title{
+  text-align:center;
 }
 
 /* Add styles for the cart container */
 .cart-container {
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0; /* Light gray */
+  border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
 }
@@ -22,8 +22,9 @@
 /* Add styles for the cart item */
 .cart-item {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0; /* Light gray */
+  padding: 15px 0;
 }
 
 .img-container {
@@ -32,11 +33,55 @@
 
 .img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .product-info {
   margin-left: 20px;
+  flex-grow: 1;
 }
+
+.product-id {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #666;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: #f0f0f0; /* Light gray */
+}
+
+.quantity {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.remove-button, .buy-button {
+  background-color: #ff523b; /* Flipkart red */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* add cart buttons */
 
 .C {
   background-color: #ff5733;
@@ -48,29 +93,35 @@
   outline: none;
 }
 
-.C:hover {
-  background-color: #e9451e;
+
+.remove-button:hover, .buy-button:hover {
+  background-color: #e9451e; /* Slightly darker red */
 }
 
-
-.id-and-buttons {
-  display: flex;
-  align-items: center;
+.remove-button {
+  margin-right: 10px;
 }
 
-.product-id {
-  margin-right: 10px; /* Adjust margin as needed */
+.buy-button {
+  margin-top: 10px;
 }
 
-.quantity-controls {
-  display: flex;
-  align-items: center;
+.buy-button:hover {
+  background-color: #c32000; /* Darker red */
 }
 
-.quantity-controls button {
-  margin: 0 5px; /* Adjust margin as needed */
-}
-
-.remove-button, .Buy {
-  margin-top: 10px; /* Adjust margin as needed */
+/* Adjustments for small screens */
+@media screen and (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .img-container {
+    margin-bottom: 15px;
+  }
+  
+  .product-info {
+    margin-left: 0;
+  }
 }
