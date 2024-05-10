@@ -73,7 +73,9 @@ const Category = ({ addToCart }) => {
           <p>BOYS</p>
         </div>
       </div>
-
+      <div className="headding">
+           <h1 style={{ marginBottom: "-10%" }}>Look Your Styles</h1>
+      </div>
       <div className='more-products'>
         {products.map((product) => (
           <div key={product.id} className="id">

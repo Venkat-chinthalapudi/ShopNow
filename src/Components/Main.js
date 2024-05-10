@@ -12,7 +12,7 @@ import Home2 from './Shopfile/Shop2';
 import { Link } from 'react-router-dom';
 import Footer from './Shopfile/Footer';
 
-const Home = () => {
+const Main = () => {
   return (
 
 <div className="container"> 
@@ -68,6 +68,9 @@ const Home = () => {
     <div className='search'>
          <Add0/>
     </div>
+    <div className='headding'>
+      <h1>popular</h1>
+    </div>
 
    <div className='threeshop'>
          <Home2/>
@@ -81,4 +84,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;

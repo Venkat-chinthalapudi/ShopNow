@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import '../styles/nav.css';
 
-
-
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isCategoryExpanded, setIsCategoryExpanded] = useState(false);
 
   const toggleNavbar = () => {
     setIsNavExpanded(!isNavExpanded);
   };
 
+  const toggleCategory = () => {
+    setIsCategoryExpanded(!isCategoryExpanded);
+  };
+
   const handleNavItemClick = () => {
     setIsNavExpanded(false); // Close the navbar when a navigation item is clicked
   };
-
 
   return (
     <nav className="navbar">
@@ -34,9 +36,25 @@ const Navbar = () => {
         <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink exact to="/" className="nav-link" activeClassName="active">Shop</NavLink> 
         </li>
-        <li className="nav-item" onClick={handleNavItemClick}>
-          <NavLink to="/category" className="nav-link" activeClassName="active">Category</NavLink>
-        </li>
+   {/* dropdown */}
+      <li className="nav-item dropdown" onMouseEnter={toggleCategory}>
+          <NavLink to="/category" className="nav-link dropdown-toggle" style={{ cursor: "pointer" }}>Category</NavLink>
+          <ul className={`dropdown-menu ${isCategoryExpanded ? 'show' : ''}`}>
+            <li className="dropdown-item">
+              <NavLink to="/boys" className="nav-link" activeClassName="active">Boys</NavLink>
+            </li>
+            <li className="dropdown-item">
+              <NavLink to="/girls" className="nav-link" activeClassName="active">Girls</NavLink>
+            </li>
+            <li className="dropdown-item">
+              <NavLink to="/celebrations" className="nav-link" activeClassName="active">Celebrations</NavLink>
+            </li>
+            <li className="dropdown-item">
+              <NavLink to="/kids" className="nav-link" activeClassName="active">Kids</NavLink>
+            </li>
+          </ul>
+       </li>
+       
         <li className="nav-item" onClick={handleNavItemClick}>
           <NavLink to="/cart" className="nav-link" activeClassName="active">Cart</NavLink> 
         </li>

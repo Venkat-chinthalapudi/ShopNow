@@ -104,11 +104,11 @@ const Footer = () => {
                     </Column>
                 </Row>
             </FooterContainer>
-            <div className='footer-container'>
+            {/* <div className='footer-container'> */}
                 <div className='footer-content'>
                     <p>© 2024 Your Website Name. All rights reserved.</p>
                 </div>
-            </div>
+            {/* </div> */}
         </Box>
     );
 };

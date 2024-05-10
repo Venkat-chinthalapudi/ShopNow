@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './Components/Nav';
-import Shop from './Components/Shop';
+import Shop from './Components/Main';
 import Cart from './Components/Cart';
 import Category from './Components/Category';
 import Profile from './Components/Profile';
@@ -10,8 +10,8 @@ import Boys from './Components/Category file/Boys';
 import Celebrations from './Components/Category file/Celebrations';
 import Girls from './Components/Category file/Girls';
 import Kids from './Components/Category file/Kids';
-import Fashion1 from './Components/Shopfile/Fashion2';
-import Fashion2 from './Components/Shopfile/Fashion1';
+import Fashion1 from './Components/Shopfile/Fashion1';
+import Fashion2 from './Components/Shopfile/Fashion2';
 import Login from './Components/Login';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    alert(`${product.name} has been added to your cart!`);  };
+  };
 
   const removeFromCart = (productToRemove) => {
     setCart(cart.filter(product => product.id !== productToRemove.id));
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <Router>
-            <Navbar />
+      <Navbar />
       <div>
         <Routes>
           {/* <Route path="/Nav"element={<Nav/>} */}

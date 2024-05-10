@@ -1,6 +1,7 @@
 
 .container{
   margin-top: 8%;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .home {
@@ -31,6 +32,7 @@
 
 /* slider */
 .text-center {
+  margin-bottom: -70px;
   text-align: center;
   font-size: 25px;
   font-weight: 900;

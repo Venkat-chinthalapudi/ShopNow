@@ -113,32 +113,93 @@
   background-color: #3e8e41;
 }
 
-/* 
-.search-box {
-  display: flex;
-  align-items: center;
-}
-
-.search-box input[type="serach"] {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 5px;
-  font-size: 12px;
-}
-
-.search-box button {
-  background-color: #007bff;
-  color: #fff;
+/* dropdown css   */
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f8f9fa;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px;
+  border-radius: 0;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.search-box button:hover {
-  background-color: #0056b3;
-} */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Modify Category item */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item.dropdown .nav-link {
+  cursor: pointer;
+  font-weight: 600;
+  color: #343a40;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item.dropdown .nav-link:hover {
+  background-color: #e9ecef;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    display: none;
+    animation: none;
+  }
+
+  .navbar-nav.expanded .dropdown-menu {
+    display: block;
+    margin-top: 10px;
+  }
+}
 
 
 /* nav X shape hide */
@@ -170,7 +231,7 @@
   }
 
   .navbar-nav {
-    
+    row-gap: 30px;
     background-color: #9cb59c;
     padding: 115px 27px;
     margin-top: 10px;
