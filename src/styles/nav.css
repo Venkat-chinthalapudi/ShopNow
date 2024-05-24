@@ -15,8 +15,7 @@
 
 .navbar-logo {
   color: #fff;
-  width: 50%;
-  height: 50%;
+  width: 15%;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -31,6 +30,10 @@
 
 .nav-item {
   margin-right: 10px;
+}
+
+.logo-image{
+  width: 16%;
 }
 
 .nav-link.active {
@@ -275,6 +278,12 @@
 
   .navbar-logo {
     color: #02660f;
+    
+  }
+
+  .logo-image{
+    width: 16%;
+    margin-right: 82%;
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import '../styles/nav.css';
-import logoImage from '../Img/logo3.avif'; 
+import logoImage from '../Img/logoooo.png'; 
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -30,10 +30,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
-      <NavLink exact to="/" className="navbar-logo">
+      <div class='loo'>
+    <NavLink exact to="/" className="navbar-logo">
           <img src={logoImage} alt="Logo" className="logo-image" />
-        </NavLink>        <button
+        </NavLink>   
+        </div>
+      <div className="navbar-brand">
+           <button
           className={`navbar-toggle ${isNavExpanded ? 'active' : ''}`}
           onClick={toggleNavbar}
           aria-label="Toggle navigation"
