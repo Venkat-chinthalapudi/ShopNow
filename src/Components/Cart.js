@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/cart.css';
 
-const Cart = ({ cart, removeFromCart }) => {
+const Cart = ({ cart = [], removeFromCart }) => {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    // Group cart items by their ID and count the quantity
     const groupedCartItems = cart.reduce((acc, product) => {
       const existingProduct = acc.find((item) => item.id === product.id);
       if (existingProduct) {
@@ -22,24 +25,26 @@ const Cart = ({ cart, removeFromCart }) => {
     const updatedCart = cartItems.map((item) =>
       item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
     );
-    setCartItems(updatedCart);
+    setCartItems(updatedCart); 
   };
 
   const handleRemoveFromCart = (product) => {
     const updatedCart = cartItems.map((item) =>
       item.id === product.id ? { ...item, quantity: Math.max(0, item.quantity - 1) } : item
-    );
+    ).filter(item => item.quantity > 0);
     setCartItems(updatedCart);
   };
 
   const handleBuyProduct = (product) => {
-    alert('Product added to your order!');
+    navigate('/buynow', { state: { product } });
+    
   };
 
   return (
     <div className="Cart">
       <h1 className="title">Cart Items Here!</h1>
-      <h2 className="title"> Cart Items {cartItems.length > 0 && <span className="notification">{cartItems.length}</span>}
+      <h2 className="title">
+        Cart Items {cartItems.length > 0 && <span className="notification">{cartItems.length}</span>}
       </h2>
       <div className="cart-container">
         {cartItems.map((product) => (

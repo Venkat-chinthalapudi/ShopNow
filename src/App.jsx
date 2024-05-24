@@ -13,6 +13,7 @@ import Kids from './Components/Category file/Kids';
 import Fashion1 from './Components/Shopfile/Fashion1';
 import Fashion2 from './Components/Shopfile/Fashion2';
 import Login from './Components/Login';
+import Buynow from './Components/Buynow';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/fashion2" element={<Fashion2 />} />
           <Route path="/fashion1" element={<Fashion1 />} />
           <Route path="/Login" element={<Login /> } />
+          <Route path="/Buynow" element={<Buynow/>}/>
 
         </Routes>
 

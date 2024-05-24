@@ -1,6 +1,8 @@
 import styled from "styled-components";
  
+
 export const Box = styled.div`
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     padding: 5% 2.5%;
     background: black;
     bottom: 0;
@@ -8,6 +10,7 @@ export const Box = styled.div`
 `;
  
 export const FooterContainer = styled.div`
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +19,7 @@ export const FooterContainer = styled.div`
 `;
  
 export const Column = styled.div`
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -34,12 +38,14 @@ export const Row = styled.div`
         grid-template-columns: repeat(
             auto-fill,
             minmax(200px, 1fr)
+            font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         );
     }
 `;
  
 export const FooterLink = styled.a`
     color: #fff;
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin-bottom: 20px;
     font-size: 12px;
     text-decoration: none;
@@ -51,6 +57,7 @@ export const FooterLink = styled.a`
 `;
  
 export const Heading = styled.p`
+    font-family: 'apple-system, BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 18px;
     color: #fff;
     margin-bottom: 40px;

@@ -31,7 +31,7 @@ const Main = () => {
     
 
 {/* sliders images in catrgory wise */}
-   <h4 className='text-center'>Shop with a list</h4>
+   <h2 className='text-center'>Shop with a list</h2>
      <div className="slider">       
         <div className="image-container">
         <Link to="/Girls">

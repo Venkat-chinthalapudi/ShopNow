@@ -45,12 +45,22 @@
     flex-basis: 100%; 
     max-width: none;
   }
-  .twoimg {
-    flex-wrap: wrap; 
-  }
+  
   
 }
 
+@media screen and (max-width: 768px) {
+  .twoimg {
+    flex-direction: column; /* Stack images vertically on small screens */
+    align-items: center; /* Center images horizontally */
+  }
+
+  .twoimg img {
+    width: 100%; /* Make images take the full width of the container */
+    max-width: 100%; /* Ensure images don't exceed their original size */
+    margin-bottom: 10px; /* Add some space between images */
+  }
+}
 
 
 
@@ -98,6 +108,20 @@
   justify-content: center;
   flex-wrap: wrap; 
 }
+
+@media screen and (max-width: 768px) {
+  .threeShops {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .threeShops > * {
+    width: 100%; /* Make items take the full width of the container */
+    max-width: 100%; /* Ensure items don't exceed their original size */
+    margin-bottom: 10px; /* Add some space between items */
+  }
+}
+
 
 .image-container {
   text-align: center;

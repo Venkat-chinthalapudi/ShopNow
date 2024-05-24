@@ -27,3 +27,20 @@
     justify-content: center; 
   }
   
+
+  .back-button {
+    position: fixed;
+   
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the button is above other elements */
+  }
+  
+  .back-button:hover {
+    background-color: #e2e6ea;
+  }
